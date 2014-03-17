@@ -5,5 +5,5 @@
   <li>Описание: <%= urls_to_links(urls_to_images(@item.description)) %></li>
   <li>Вес: <%= @item.weight %> кг</li>
   <li>Реальный: <%= @item.real %></li>
-  <%= image_tag @item.image_url.to_s %>
+  <%= image_tag @item.image.url.to_s if @item.image %>
 </ul>
