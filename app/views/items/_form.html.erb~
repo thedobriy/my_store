@@ -1,0 +1,7 @@
+  <p>Наименоваие: <%= f.text_field :name %></p>
+  <p>Описание: <%= f.text_field :description %></p>
+  <p>Цена: <%= f.text_field :price %></p>
+  <p>Вес: <%= f.text_field :weight %></p>
+  <p>Реальный: <%= f.text_field :real %></p>
+   <label>My Image</label>
+  <p><%= f.image_field :image %></p>

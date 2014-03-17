@@ -1,0 +1,7 @@
+class CreateCartsItems < ActiveRecord::Migration
+  def change
+    create_table :carts_items, id: false do |t|
+      
+    end
+  end
+end

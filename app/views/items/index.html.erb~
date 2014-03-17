@@ -1,0 +1,16 @@
+<table border=0>
+    <tr>
+      <td>Id</td><td>Наименование</td><td>Описание</td><td>Цена</td>
+  </tr>
+  <% @items.each do |i| %>
+  <tr>
+    <td><%= i.id %></td>
+    <td><%= link_to i.name, item_path(i) %> 
+      (<%= link_to "Изменить", edit_item_path(i) %>) 
+      (<%= link_to "Удалить", i, method: :delete, data: { confirm: "Точно удалить?" } %>) 
+     </td>
+    <td><%= i.description %></td>
+    <td><%= i.price %></td>
+  </tr>
+  <% end %>
+<table>

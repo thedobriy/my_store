@@ -1,0 +1,4 @@
+class AddColumnUseridToOrders < ActiveRecord::Migration
+  def change
+  end
+end

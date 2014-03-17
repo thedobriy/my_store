@@ -1,0 +1,9 @@
+<h1><%= @item.name%></h1>
+
+<ul>
+  <li>Цена: <%= @item.price %> грн.</li>
+  <li>Описание: <%= urls_to_links(urls_to_images(@item.description)) %></li>
+  <li>Вес: <%= @item.weight %> кг</li>
+  <li>Реальный: <%= @item.real %></li>
+  <%= image_tag @item.image_url.to_s %>
+</ul>

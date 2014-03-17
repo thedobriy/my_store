@@ -1,0 +1,18 @@
+<table border=0>
+    <tr>
+      <th>Id</th><th>Наименование</th><th>Цена</th><th>Рейтинг</th><th>Админ</th>
+  </tr>
+  <% @items.each do |i| %>
+  <tr>
+    <td><%= i.id %>
+  <%= image_tag i.image_url.to_s %>
+  </td>
+    <td><%= link_to i.name, item_path(i) %></td>
+    <td><%= i.price %></td>
+    <td><%= i.votes_count %>, <%= link_to "+", upvote_item_path(i) %></td>
+    <td>(<%= link_to "Edit", edit_item_path(i) %>) 
+      (<%= link_to "Delete", i, method: :delete, data: { confirm: "Are you sure?" } %>)</td>
+
+  </tr>
+  <% end %>
+<table>

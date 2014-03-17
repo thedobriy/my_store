@@ -1,0 +1,13 @@
+<table border=0>
+    <tr>
+      <td>Id</td><td>Login</td><td>E-mail</td><td>Empty</td>
+  </tr>
+  <% @users.each do |i| %>
+  <tr>
+    <td><%= i.id %></td>
+    <td><%= i.login %> </td>
+    <td><%= i.email %></td>
+    <td></td>
+  </tr>
+  <% end %>
+<table>
